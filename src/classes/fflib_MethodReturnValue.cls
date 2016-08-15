@@ -29,12 +29,14 @@ public with sharing class fflib_MethodReturnValue
 	/**
 	 * Class defining a method return value.
 	 */
+	@testVisible
 	public Object ReturnValue { get; private set; }
 
 	/**
 	 * Setup a stubbed return value.
 	 * @param value The value to return from the stubbed method call.
 	 */
+	@testVisible
 	public void thenReturn(Object value)
 	{
 		returnValue = value;
@@ -44,6 +46,7 @@ public with sharing class fflib_MethodReturnValue
 	 * Setup a stubbed exception.
 	 * @param e The exception to throw from the stubbed method call.
 	 */
+	@testVisible
 	public void thenThrow(Exception e)
 	{
 		returnValue = e;
